@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #efefef;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.logo{
+    font-size: 28px;
+    font-weight: 800;
+    color: #fefefe;
+}
+.hamoburger{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    font-size: 20px;
+    color: #feefef;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin:  0 5px;
+}
+.nav-bar ul li a:hover{
+        color: black;
+        background-color: #efefef;
+
+}
+.nav-bar ul li a.active{
+    color: black;
+    background-color: #efefef;
+}
+@media only screen and (max-width:1320px) { 
+    header{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width:1100px) { 
+    header{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width:900px) { 
+    .hamoburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamoburger .line{
+        width: 30px;
+        height: 3px;
+        background-color: #efefef;
+        margin: 6px 0px;
+    }
+  .nav-bar .active{
+     height: 450px;
+  }
+    .nav-bar{
+        height: 450px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: black;
+        transition: 0.2s ;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5;
+        opacity: 0;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 10px;
+        color: red;
+    }
+
+}
